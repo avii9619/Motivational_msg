@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Mot App</title>
+    </head>
+
+    <body>
+        <center>
+            <h1>Motivational Msg App</h1>
+            <form onsubmit="getMsg()">
+                <input type="submit" value="Get Msg"/>
+                <br/><br/>
+            </form>
+            <h2 id="display"/>
+
+            <script>
+                function getMsg(){
+                    event.preventDefault();
+                    let display=document.getElementById("display");
+
+                    let msg=["Dream big today.",
+                            "Embrace the challenge.",
+                            "Believe and achieve.",
+                            "Rise and conquer.",
+                            "Stay focused always.",
+                            "Act with courage.",
+                            "Persist and succeed.",
+                            "Unlock your potential.",
+                            "Make it happen.",
+                            "Chase your dreams."];
+
+                            let r=parseInt(Math.random()*msg.length);
+
+                            display.innerHTML=msg[r];
+                }
+            </script>
+        </center>
+    </body>
+</html>
